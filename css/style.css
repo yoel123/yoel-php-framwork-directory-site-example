@@ -1,0 +1,151 @@
+h2
+{
+text-align:center;
+}
+.y_form
+{
+	text-align:center;
+}
+.y_center
+{
+	text-align:center !important;
+	display:inherit !important;
+}
+
+.ywrap
+{
+	word-wrap: break-word;
+}
+
+.cat_parent
+{
+	padding:10px;
+}
+
+.contacr_info_dir  ul
+{
+    list-style: none;
+    padding: 0;
+}
+.dir_desc{padding:30px;}
+.gallery_img,.dir_img ,.cat_img_single
+{
+	max-width: 100%;
+    height: 250px;
+}
+
+.single_review 
+{
+    padding: 30px;
+    border: 1px solid #E5E5E5;
+}
+
+.y_map div
+{
+    margin: 0 auto;
+}
+
+.lightbox 
+ {
+	    position:fixed; /* keeps the lightbox window in the current viewport */
+	    top:0;
+	    left:0;
+	    width:100%;
+	    height:100%;
+	    background:url(overlay.png) repeat;
+	    text-align:center;
+}
+.lightbox  form 
+ {
+
+}
+.conntact_us_lightbox 
+{
+	z-index:999999999; 
+	background: rgba(255, 255, 255, 0.921569);
+	 display:none;
+}
+
+.featured_dir
+{
+
+	padding: 30px;
+    background: #FFFFB3;
+}
+.featured_dir img,.dir_img_single
+{
+	width:100%;
+	height:150px
+}
+/*stars*/
+form .stars {
+  background: url("images/stars.png") repeat-x 0 0;
+  width: 150px;
+  margin: 0 auto;
+}
+ 
+form .stars input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+form .stars input[type="radio"].star-5:checked ~ span {
+  width: 100%;
+}
+form .stars input[type="radio"].star-4:checked ~ span {
+  width: 80%;
+}
+form .stars input[type="radio"].star-3:checked ~ span {
+  width: 60%;
+}
+form .stars input[type="radio"].star-2:checked ~ span {
+  width: 40%;
+}
+form .stars input[type="radio"].star-1:checked ~ span {
+  width: 20%;
+}
+form .stars label {
+  display: block;
+  width: 30px;
+  height: 30px;
+  margin: 0!important;
+  padding: 0!important;
+  text-indent: -999em;
+  float: left;
+  position: relative;
+  z-index: 10;
+  background: transparent!important;
+  cursor: pointer;
+}
+form .stars label:hover ~ span {
+  background-position: 0 -30px;
+}
+form .stars label.star-5:hover ~ span {
+  width: 100% !important;
+}
+form .stars label.star-4:hover ~ span {
+  width: 80% !important;
+}
+form .stars label.star-3:hover ~ span {
+  width: 60% !important;
+}
+form .stars label.star-2:hover ~ span {
+  width: 40% !important;
+}
+form .stars label.star-1:hover ~ span {
+  width: 20% !important;
+}
+form .stars span {
+  display: block;
+  width: 0;
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 30px;
+  background: url("images/stars.png") repeat-x 0 -60px;
+  -webkit-transition: -webkit-width 0.5s;
+  -moz-transition: -moz-width 0.5s;
+  -ms-transition: -ms-width 0.5s;
+  -o-transition: -o-width 0.5s;
+  transition: width 0.5s;
+}

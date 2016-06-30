@@ -1,0 +1,19 @@
+<div class='row cat_parent'>
+
+<?php 
+if (is_array($cats) || is_object($cats))
+{
+   
+foreach($cats as $cat): ?> 
+<div class="col-md-4 ywrap">
+	<img href = "<?php echo $cat['img']; ?>" class='cat_img'/>
+	<a href='<?php echo $cat['name']; ?>'>
+		<?php echo $cat['name']; ?>
+	</a>
+	<p>
+		<?php echo $cat['desc']; ?>
+	</p>
+</div> 
+<?php endforeach; }?> 
+
+</div>

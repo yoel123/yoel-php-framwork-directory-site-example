@@ -1,0 +1,50 @@
+<?php
+$test_form = new yform("","POST","class_name","add directory");
+$test_form->is_upload = true;
+//name
+$test_form->text("name","","text","text_test",1,"placeholder",4,"");
+
+//description
+$test_form->textarea("desc","","textarea_test",0,"");
+
+//email
+$test_form->text("email","","email","text_test",1,"placeholder",4,"");
+
+//address
+$test_form->text("address","","text","text_test",1,"placeholder",4,"");
+
+//phone
+$test_form->text("phone","","text","text_test",1,"placeholder",4,"");
+
+//website
+$test_form->text("website","","text","text_test",1,"placeholder",4,"");
+
+//facebook
+$test_form->text("facebook","","text","text_test",1,"placeholder",4,"");
+
+//twitter
+$test_form->text("twitter","","text","text_test",1,"placeholder",4,"");
+
+//googleplus
+$test_form->text("googleplus","","text","text_test",1,"placeholder",4,"");
+
+//opening hours
+$test_form->textarea("opening_h","","textarea_test",0,"");
+
+//location (select from locations table)
+$test_form->select("location","","select_test1",$select_loc_data
+,"placeholder");
+
+//categoris chackboxs
+$test_form->chackboxes($chackbox_cat_data,"-inline  ","chackboxes test");
+
+//img
+$test_form->upload("main_img","upload file");
+
+
+
+//submit
+$test_form->submit("submit","submit");
+
+echo $test_form->create();
+?>

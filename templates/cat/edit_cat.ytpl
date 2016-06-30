@@ -1,0 +1,23 @@
+<?php
+$test_form = new yform($cat['id'],"POST","class_name","edit category");
+
+//name
+$test_form->text("name","","text","text_test",1,"placeholder",4,$cat['name']);
+
+//description
+$test_form->textarea("desc","","textarea_test",0,$cat['desc']);
+
+//parent_id
+$test_form->select("parent_id","","select_test1",$select_cat_data
+,"placeholder");
+
+//img
+$test_form->upload("img","upload file");
+
+//hidden cat id
+
+//submit
+$test_form->submit("submit","submit");
+
+echo $test_form->create();
+?>

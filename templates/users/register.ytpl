@@ -1,0 +1,43 @@
+<form action="" method="post" class="form-horizontal y_form">
+<fieldset>
+
+<!-- Form Name -->
+<legend>register</legend>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="name">user name</label>  
+  <div class="col-md-4">
+  <input id="name" name="name" type="text" placeholder="" class="form-control input-md" required="">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="email">email</label>  
+  <div class="col-md-4">
+  <input id="email" name="email" type="email" placeholder="" class="form-control input-md" required >
+    
+  </div>
+</div>
+
+<!-- Password input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="password">Password </label>
+  <div class="col-md-4">
+    <input id="password" name="password" type="password" placeholder="" class="form-control input-md" required="">
+    
+  </div>
+</div>
+
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="singlebutton"></label>
+  <div class="col-md-4">
+    <input type="submit" id="singlebutton" name="user_submit" class="btn btn-primary" value="submit"/>
+  </div>
+</div>
+
+</fieldset>
+</form>

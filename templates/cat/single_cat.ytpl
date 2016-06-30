@@ -1,0 +1,50 @@
+<!-- single cat name pic and description -->
+<div class='single_cat row'>
+	<div class="col-sm-12 text-center">
+		<h2>
+			<?php echo $cat['name']?>
+		</h2>
+		<img src = "../img/<?php echo $cat['img']; ?>" class='cat_img cat_img_single'/>
+		<p>
+			<?php echo $cat['desc']?>
+		</p>
+	</div>
+</div><!-- end single_cat -->
+
+<div class='dirs_in_cat row'>
+<div class="col-sm-12 text-center featured_dir">
+<!-- loop featured dirs -->
+<?php 
+if (is_array($featured) || is_object($featured))
+{
+   
+foreach($featured as $fdir): ?> 
+<div class="col-md-4 ywrap">
+<a href = "../directory/<?php echo $fdir['name'];?>">
+<img src = "../img/<?php echo $fdir['main_img']; ?>" class='cat_img cat_img_single'/>
+<?php echo $fdir['name'];?>
+</a>
+</div>
+<?php endforeach; }?> 
+
+</div>
+<div class="col-sm-12 text-center">
+	<h2>
+	directories
+	</h2>
+</div>
+<!-- loop all dirs in cat-->
+<?php 
+if (is_array($dirs) || is_object($dirs))
+{
+  
+foreach($dirs as $dir): ?> 
+<div class="col-md-4 ywrap">
+<a href = "../directory/<?php echo $dir['name'];?>">
+<img src = "../img/<?php echo $dir['main_img']; ?>" class='dir_img dir_img_single'/>
+<?php echo $dir['name'];?>
+</a>
+</div>
+
+<?php endforeach; }?> 
+</div><!-- end dirs_in_cat -->

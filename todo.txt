@@ -1,0 +1,38 @@
+
+*security:
+-user validation func on every page v
+-users can see only thier info admin can see all. v
+
+*dir view page:
+-dir name v
+-desciption v
+-gallery  v
+-conntact info v
+-social links  v
+-opening houers v
+-other dirs in same cat -
+-dir review form with star rating v(show stars on each review. fix fucking stars for each review
+-google map v
+-conntact form v
+
+*search dirs:-----
+-by cat and location
+-show on google map
+
+*cat page:
+-fetured dirs v
+
+optional:
+*gallry:
+-lightbox 
+-lazy load
+
+forms-tables:
+fix text of captions etc.v
+
+*install.php v(need testing)
+
+*demo contant:
+for dirs and everything else
+
+

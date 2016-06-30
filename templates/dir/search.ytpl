@@ -1,0 +1,22 @@
+<?php
+
+//print_r($dirs);
+
+?>
+<h1>
+search results:
+</h1>
+<?php 
+if (is_array($dirs) || is_object($dirs))
+{
+  
+foreach($dirs as $dir): ?> 
+<div class="col-md-4 ywrap">
+<a href = "../directory/<?php echo $dir['name'];?>">
+<img src = "../img/<?php echo $dir['main_img']; ?>" class='dir_img dir_img_single'/>
+<?php echo $dir['name'];?>
+</a>
+</div>
+
+<?php endforeach; }?> 
+</div><!-- end dirs_in_cat -->

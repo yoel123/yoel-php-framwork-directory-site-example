@@ -1,0 +1,44 @@
+<div class='row cat_parent'>
+
+<div class="col-sm-12 text-center seach_by">
+<?php
+
+$test_form = new yform("search_page","POST","class_name","search directory");
+
+//select location
+$test_form->select("location","","select location",$select_loc_data
+,"placeholder");
+
+//select cat
+$test_form->select("cat","","select category",$select_cat_data
+,"placeholder");
+//submit
+$test_form->submit("submit","search");
+if($no_search){}//disable search
+else
+{
+	echo $test_form->create();
+}
+
+?>
+</div><!--end seach_by-->
+<h2>
+category list
+</h2>
+<?php 
+if (is_array($cats) || is_object($cats))
+{
+ if($inner){$cat_dirt="";}else {$cat_dirt="category/";}  
+foreach($cats as $cat): ?> 
+<div class="col-md-4 ywrap">
+	<img src = "img/<?php echo $cat['img']; ?>" class='cat_img cat_img_single'/>
+	<a href='<?php echo $cat_dirt.$cat['name']; ?>'>
+		<?php echo $cat['name']; ?>
+	</a>
+	<p>
+		<?php echo $cat['desc']; ?>
+	</p>
+</div> 
+<?php endforeach; }?> 
+
+</div>

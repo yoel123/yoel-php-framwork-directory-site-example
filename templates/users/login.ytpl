@@ -1,0 +1,43 @@
+<form action="login" method="POST" class="form-horizontal y_form">
+<fieldset>
+
+<!-- Form Name -->
+<legend>login</legend>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="name">email</label>  
+  <div class="col-md-4">
+  <input id="name" name="email" type="email" placeholder="" class="form-control input-md" required>
+    
+  </div>
+</div>
+
+<!-- Password input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="password">Password </label>
+  <div class="col-md-4">
+    <input id="password" name="password" type="password" placeholder="" class="form-control input-md" required="">
+    
+  </div>
+</div>
+
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="singlebutton"></label>
+  <div class="col-md-4">
+    <button id="singlebutton" name="singlebutton" class="btn btn-primary">submit</button>
+  </div>
+</div>
+
+</fieldset>
+</form>
+
+<a href="reset_password" class='y_center'>
+forgot password
+</a>
+<p class='y_center'>
+
+user: admin@admin.com<br>
+password: 123
+</p>

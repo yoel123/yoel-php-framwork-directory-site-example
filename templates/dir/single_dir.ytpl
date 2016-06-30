@@ -1,0 +1,159 @@
+<?php
+//print_r($dir);
+?>
+
+
+<div class='single_dir row'>
+
+	<div class="col-sm-12 text-center">
+			<h2>
+				<?php echo $dir['name']?>
+			</h2>
+			<img src = "../img/<?php echo $dir['main_img']; ?>" class='dir_img '/>
+			<p class ='ywrap dir_desc'>
+				<?php echo $dir['desc']?>
+			</p>
+			
+			<!--gallery-->
+			<div class="gallery">
+			<?php 
+				if (is_array($gallery) || is_object($gallery))
+				{
+				 if($inner){$cat_dirt="";}else {$cat_dirt="category/";}  
+				foreach($gallery as $img): ?> 
+				
+				<div class="col-md-4 ywrap">
+					<img src = "../img/<?php echo $img['src']; ?>" class='gallery_img'/>
+				
+				</div> 
+			<?php endforeach; }?> 
+			</div>
+			<!--end gallery-->
+			
+			<h3>
+				contact details
+			</h3>
+			<div class="contacr_info_dir text-center">
+				<ul>
+					<li>
+					<b>address: </b><?php echo $dir['address']?>
+					</li>
+					<li>
+					<a href="waze://?q=<?php echo $dir['address']?>">waze</a>
+					</li>
+					<li>
+					<b>phone: </b><?php echo $dir['phone']?>
+					</li>
+					<li>
+					<b><a href="<?php echo $dir['website']?>">website</a></b>
+					</li>
+				</ul>
+			</div>
+		
+			<div class="social__container">   
+
+				<a href="<?php echo $dir['facebook']?>" class="sb orange twitter">Twitter</a>
+				<a href="<?php echo $dir['twitter']?>" class="sb blue facebook">Facebook</a>
+				<a href="<?php echo $dir['twitter']?>" class="sb light-blue star">g</a>
+			</div><!-- end social__container  -->
+			<!--contact us-->
+			
+			<div class="conntact_us">
+				<button type="button" class="btn btn-primary conntact_us_btn">contact us</button>
+				<div class="conntact_us_lightbox">
+					<?php
+						$contact_form = new yform("../contact","POST","class_name","contact us");
+						$contact_form->text("name","","text","name",1,"",4,"");
+						$contact_form->text("email","","email","email",1,"");
+
+						$contact_form->textarea("content","","content",1,"");
+						$contact_form->custom('<input type="hidden" name="dir_mail" value="'.$dir['email'].'">');
+			
+						$contact_form->submit("submit","submit");
+						echo $contact_form->create();
+						
+					?>
+					<button type="button" class="btn btn-primary yclose">close</button>
+				</div>
+			</div>
+			
+			<!--end contact us-->
+			<div class="opening_houers">   
+				<h3>
+				opening hours
+				</h3>
+				
+				<p>
+					<?php echo $dir['opening_h'];?>
+					
+				</p>
+			</div><!-- end opening_houers  -->
+			
+			<!--google map-->
+			<?php
+				$map = new MapBuilder();
+				$pos = get_loc($map,$dir['address'],"both",$dir['name']);
+				$map->setMapTypeId(MapBuilder::MAP_TYPE_ID_ROADMAP); 
+				$map->setSize(220, 300); 
+				echo "<div class='y_map'>
+				<h3>
+				map
+				</h3>";
+				
+				$map->show();
+				echo "</div>";
+			?>
+			<!--end google map-->
+			
+			<!--add_review-->
+			<div class="review_form">
+			<?php
+			$test_form = new yform("","POST","class_name","review");
+			$test_form->custom('<input type="hidden" name="dir_id" value="'.$dir['id'].'">');
+			$test_form->textarea("content","","content",0,"");
+			//stars
+			$test_form->custom('
+			   <div class="stars">
+					<input type="radio" name="star" class="star-1" id="star-1" value= "1" />
+					<label class="star-1" for="star-1">1</label>
+					<input type="radio" name="star" class="star-2" id="star-2" value= "2" />
+					<label class="star-2" for="star-2">2</label>
+					<input type="radio" name="star" class="star-3" id="star-3" value= "3" />
+					<label class="star-3" for="star-3">3</label>
+					<input type="radio" name="star" class="star-4" id="star-4" value= "4"/>
+					<label class="star-4" for="star-4">4</label>
+					<input type="radio" name="star" class="star-5" id="star-5" value= "5"/>
+					<label class="star-5" for="star-5">5</label>
+					<span></span>
+				</div>
+			');
+			
+			$test_form->submit("submit","submit");
+			echo $test_form->create();
+			
+			?>
+			</div>
+			<!--end add_review-->
+			
+			<!--all_reviews-->
+			<div class="all_reviews">
+			<?php 
+				if (is_array($reviews) || is_object($reviews))
+				{
+				 
+				foreach($reviews as $review): ?> 
+				
+			    <div class="single_review col-sm-12 text-center">	
+					<p>
+						<?php echo $review['content']?>
+					</p>
+					stars: <?php echo $review['stars']?>
+				</div> 
+			<?php endforeach; }?> 
+			</div>
+			<!--end all_reviews-->
+
+	</div>
+
+</div><!-- end single_dir -->
+
