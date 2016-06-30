@@ -17,9 +17,9 @@ pages:<br>
 of this category.<br>
 *directory:holds the name ,img and description of the dir,dir gallery,conntact details,social links,conntact form,<br>
 waze link,google map(with the dirs address from db) and a review form with stars for rating.
-<br>
+<br><br>
 the admin is mostly ajax crud framework,check their site for more detail, its dead simple to use
 (only logged in admin can use that part).
-<br>
+<br><br>
 i didnt add any navigation,sidbar etc. i wanted it to be a bare bones example.
 <br> chack the screenshots to see how it looks.
