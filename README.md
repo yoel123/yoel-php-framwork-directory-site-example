@@ -4,7 +4,9 @@ like before its not about web design at all, its about calling and manipulating 
 and showing it to the user. it has the most minimalistic design.
 
 everything is organised into folders as explained here:
-
+<br>
+https://github.com/yoel123/yoel-php-framwork-simple-blog-example
+<br>
 the system itself is a implantation of a business directory.<br>
 in this implantation only the admin can add directory categorys and other data via admin panel.<br>
 visors can leave a review and use the contact form,search form and view all public data.<br>
